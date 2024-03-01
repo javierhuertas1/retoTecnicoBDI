@@ -23,7 +23,7 @@ public class UserDTO {
     private UUID id;
 
     @NotBlank
-    @Pattern(regexp = "^[a-zA-Z0-9_]+$", message = "Username can only contain alphanumeric characters and underscores")
+    @Pattern(regexp = "^[a-zA-Z0-9_ ]+$", message = "Username can only contain alphanumeric characters, underscores, and spaces")
     @Column(name = "name", length = 125)
     private String name;
 
