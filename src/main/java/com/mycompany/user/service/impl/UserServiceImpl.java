@@ -40,29 +40,6 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public ResponseEntity<User> login(LoginRequest loginRequest) {
-
-        return null;
-
-    }
-
-
-    @Override
-    public ResponseEntity<User> getUserById(UUID id) {
-        try {
-            Optional<UserDTO> optionalUser = userRepository.findById(id);
-            if (optionalUser.isEmpty()) {
-                throw new NoContentFoundException("Not found user.");
-            }
-
-            return ResponseEntity.ok(userMapper.userDTOToUserRs(optionalUser.get()));
-
-        } catch (Exception e) {
-            throw new InternalServerErrorException("Error processing request.");
-        }
-    }
-
-    @Override
     public ResponseEntity<User> create(UserRq user) {
 
         if (userRepository.existsByEmail(user.getEmail())) {

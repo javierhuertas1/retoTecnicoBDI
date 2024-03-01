@@ -20,22 +20,6 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/signIn")
-    @Operation(summary = "Authenticate user with username and password")
-    public ResponseEntity<User> login(@Valid @RequestBody LoginRequest loginRequest) {
-
-        return userService.login(loginRequest);
-
-    }
-
-    @GetMapping("/getUserById/{userId}")
-    @Operation(summary = "Get user info logged in by userId")
-    public ResponseEntity<User> getUserById(@PathVariable("userId") UUID userId) {
-
-        return userService.getUserById(userId);
-
-    }
-
     @PostMapping("/signUp")
     @Operation(summary = "Create user")
     public ResponseEntity<User> create(@Valid @RequestBody UserRq userRq) {

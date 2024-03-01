@@ -9,11 +9,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.UUID;
 
 public interface UserService {
-
-    ResponseEntity<User> login(LoginRequest loginRequest);
-
-    ResponseEntity<User> getUserById(UUID id);
-
     ResponseEntity<User> create(UserRq user);
 
 
