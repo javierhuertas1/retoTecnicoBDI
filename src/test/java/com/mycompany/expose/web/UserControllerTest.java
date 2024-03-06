@@ -1,6 +1,8 @@
 package com.mycompany.expose.web;
 
+import com.mycompany.user.model.business.rq.LoginRequest;
 import com.mycompany.user.model.business.rq.UserRq;
+import com.mycompany.user.model.business.rs.MessageRs;
 import com.mycompany.user.model.business.rs.User;
 import com.mycompany.user.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -22,6 +24,24 @@ public class UserControllerTest {
 
     @InjectMocks
     private UserController userController;
+
+    @Test
+    public void testValidJWT_Success() {
+        // Arrange
+        String tokenJWT = "your-token-jwt";
+        LoginRequest loginRequest = new LoginRequest();
+        MessageRs message = new MessageRs("Your message"); // Assuming your MessageRs contains a message field
+
+        when(userService.validJWT(tokenJWT, loginRequest)).thenReturn(new ResponseEntity<>(message, HttpStatus.OK));
+
+        // Act
+        ResponseEntity<MessageRs> responseEntity = userController.validJWT(tokenJWT, loginRequest);
+
+        // Assert
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+        assertEquals(message, responseEntity.getBody());
+        verify(userService, times(1)).validJWT(tokenJWT, loginRequest);
+    }
 
     @Test
     public void testRegisterUser_Success() {

@@ -4,11 +4,11 @@ import com.mycompany.user.dao.UserPhoneRepository;
 import com.mycompany.user.dao.UserRepository;
 import com.mycompany.user.exception.type.ConflictDataException;
 import com.mycompany.user.exception.type.InternalServerErrorException;
-import com.mycompany.user.exception.type.NoContentFoundException;
 import com.mycompany.user.mapper.UserMapper;
 import com.mycompany.user.model.business.UserPhones;
 import com.mycompany.user.model.business.rq.LoginRequest;
 import com.mycompany.user.model.business.rq.UserRq;
+import com.mycompany.user.model.business.rs.MessageRs;
 import com.mycompany.user.model.business.rs.User;
 import com.mycompany.user.model.thirdparty.UserDTO;
 import com.mycompany.user.model.thirdparty.UserPhonesDTO;
@@ -21,7 +21,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -38,6 +37,26 @@ public class UserServiceImpl implements UserService {
 
     private final JwtUtils jwtUtils;
 
+
+    @Override
+    public ResponseEntity<MessageRs> validJWT(String tokenJWT, LoginRequest loginRequest) {
+        try {
+            // Extract the token from the Authorization header
+            String jwt = tokenJWT.substring("Bearer ".length());
+
+            // Validate the token using the JwtUtils class
+            boolean isValidToken = jwtUtils.validateJwtToken(jwt);
+
+            if (isValidToken) {
+                return ResponseEntity.ok(new MessageRs("JWT is valid"));
+            } else {
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(new MessageRs("Invalid token."));
+            }
+        } catch (Exception e) {
+            throw new InternalServerErrorException("Error processing request.");
+        }
+
+    }
 
     @Override
     public ResponseEntity<User> create(UserRq user) {

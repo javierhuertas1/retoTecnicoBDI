@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 public class UserRq {
 
-    @Pattern(regexp = "^[a-zA-Z0-9_ ]+$", message = "Username can only contain alphanumeric characters, underscores, and spaces")
+    @Pattern(regexp = "^[a-zA-Z0-9_]+$", message = "Username can only contain alphanumeric characters and underscores")
     private String name;
 
     @EmailRegex

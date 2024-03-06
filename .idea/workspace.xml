@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="285b7d28-e073-4dbd-829b-006f0546ae79" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/expose/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/expose/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/user/model/business/rq/UserRq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/user/model/business/rq/UserRq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/user/model/thirdparty/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/user/model/thirdparty/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/user/util/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/user/util/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/expose/web/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/expose/web/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/user/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/user/service/impl/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/business-users-management-v1-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/business-users-management-v1-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/business-users-management-v1-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/business-users-management-v1-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/MsUserManagementV1Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/expose/web/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/expose/web/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/dao/UserPhoneRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/dao/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/ErrorMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/type/BadRequestException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/type/ConflictDataException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/type/ForbiddenException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/type/InternalServerErrorException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/type/NoContentFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/exception/type/NotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/business/UserPhones.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/business/rq/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/business/rq/UserRq.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/business/rs/MessageRs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/business/rs/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/thirdparty/UserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/model/thirdparty/UserPhonesDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/user/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/user/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/util/EmailRegex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/util/EmailValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/user/util/JwtUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/mycompany/user/mapper/UserMapperImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.expose.web.UserControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.expose.web.UserControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.user.service.impl.UserServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.user.service.impl.UserServiceImplTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.expose.web.UserControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.expose.web.UserControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.user.service.impl.UserServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.user.service.impl.UserServiceImplTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mycompany/expose/web/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/mycompany/expose/web/UserControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mycompany/user/service/impl/UserServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/mycompany/user/service/impl/UserServiceImplTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2d4kribTmGs7274bHiQuDGWC22V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/mark42/Desktop/BCI/ms-users-v1",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="pt" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.MsUserManagementV1Application" />
+      <module name="business-users-management-v1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="285b7d28-e073-4dbd-829b-006f0546ae79" name="Changes" comment="" />
+      <created>1709274941103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709274941103</updated>
+    </task>
+    <servers />
+  </component>
+</project>

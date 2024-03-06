@@ -3,8 +3,11 @@ package com.mycompany.user.service.impl;
 import com.mycompany.user.dao.UserPhoneRepository;
 import com.mycompany.user.dao.UserRepository;
 import com.mycompany.user.exception.type.ConflictDataException;
+import com.mycompany.user.exception.type.InternalServerErrorException;
 import com.mycompany.user.mapper.UserMapper;
+import com.mycompany.user.model.business.rq.LoginRequest;
 import com.mycompany.user.model.business.rq.UserRq;
+import com.mycompany.user.model.business.rs.MessageRs;
 import com.mycompany.user.model.business.rs.User;
 import com.mycompany.user.model.thirdparty.UserDTO;
 import com.mycompany.user.util.JwtUtils;
@@ -38,6 +41,53 @@ class UserServiceImplTest {
 
     @InjectMocks
     private UserServiceImpl userService;
+
+
+    @Test
+    public void testValidJWT_ValidToken_ReturnsOkResponse() {
+        // Arrange
+        String validToken = "validToken";
+        LoginRequest loginRequest = new LoginRequest();
+
+        when(jwtUtils.validateJwtToken(validToken)).thenReturn(true);
+
+        // Act
+        ResponseEntity<MessageRs> response = userService.validJWT("Bearer " + validToken, loginRequest);
+
+        // Assert
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals("JWT is valid", response.getBody().getMessage());
+    }
+
+    @Test
+    public void testValidJWT_InvalidToken_ReturnsUnauthorizedResponse() {
+        // Arrange
+        String invalidToken = "invalidToken";
+        LoginRequest loginRequest = new LoginRequest();
+
+        when(jwtUtils.validateJwtToken(invalidToken)).thenReturn(false);
+
+        // Act
+        ResponseEntity<MessageRs> response = userService.validJWT("Bearer " + invalidToken, loginRequest);
+
+        // Assert
+        assertEquals(HttpStatus.UNAUTHORIZED, response.getStatusCode());
+        assertEquals("Invalid token.", response.getBody().getMessage());
+    }
+
+    @Test
+    void validJWT_ExceptionThrown() {
+        // Arrange
+        String tokenJWT = "valid-jwt-token";
+        LoginRequest loginRequest = new LoginRequest();
+
+        when(jwtUtils.validateJwtToken(tokenJWT)).thenThrow(new RuntimeException("Error validating token"));
+
+        // Act & Assert
+        InternalServerErrorException exception = assertThrows(InternalServerErrorException.class, () -> userService.validJWT(tokenJWT, loginRequest));
+        assertEquals("Error processing request.", exception.getMessage());
+    }
+
 
     @Test
     void create_success() {
